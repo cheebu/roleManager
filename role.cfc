@@ -6,7 +6,7 @@ component output="true" {
 		,{whitelist = "" , securelist = "^sectiona", roles = "2,3,4", redirect = "/login.cfm", noaccess="/no-access.cfm"}
 		,{whitelist = "" , securelist = "^sectionb", roles = "3,4", redirect = "/login.cfm", noaccess="/no-access.cfm"}
 
-		,{whitelist = "^admin", securelist = "", roles = ""}
+		,{whitelist = "^public", securelist = "", roles = ""}
 
 	];
 	
