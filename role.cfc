@@ -1,10 +1,10 @@
 component output="true" {
 
 	variables.rules = [ 
-	 	 {whitelist = "" , securelist = "^sec", roles = "2,3,4", redirect = "/admin/entrer-login-eng.cfm?err=john", noaccess="/admin/access-eng.cfm"}		
-		,{whitelist = "" , securelist = "^provider", roles = "2,3,4", redirect = "/admin/entrer-login-eng.cfm?err=jane", noaccess="/admin/access-eng.cfm"}
-		,{whitelist = "" , securelist = "^approbateur\-approver", roles = "3,4", redirect = "/admin/entrer-login-eng.cfm?err=bob", noaccess="/admin/access-eng.cfm"}
-		,{whitelist = "" , securelist = "^super", roles = "4", redirect = "/admin/entrer-login-eng.cfm?err=david", noaccess="/admin/access-eng.cfm"}
+	 	 {whitelist = "" , securelist = "^admin", roles = "administrator", redirect = "/login.cfm", noaccess="/no-access.cfm"}		
+		,{whitelist = "" , securelist = "^report", roles = "4", redirect = "/login.cfm", noaccess="/no-access.cfm"}		
+		,{whitelist = "" , securelist = "^sectiona", roles = "2,3,4", redirect = "/login.cfm", noaccess="/no-access.cfm"}
+		,{whitelist = "" , securelist = "^sectionb", roles = "3,4", redirect = "/login.cfm", noaccess="/no-access.cfm"}
 
 		,{whitelist = "^admin", securelist = "", roles = ""}
 
