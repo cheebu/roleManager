@@ -23,7 +23,7 @@ component output="true" {
         var rulesLen = arrayLen(rules);
         var securearea = true;    	
 		
-		for(x=1; x lte rulesLen; x=x+1){
+		for(x=1; x lte rulesLen; x++){
 		   	if(rules[x].roles eq "" or isActionInPattern (arguments.currentAction, rules[x].whitelist))
 	      		continue;
 	      	if(isActionInPattern (arguments.currentAction, rules[x].securelist)){
@@ -31,7 +31,7 @@ component output="true" {
 	      			location('#rules[x].redirect#','false','301');
 				} else {
 					bUserOK = false;
-					for(r=1; r lte listLen(arguments.sessionStruct[arguments.rolekey]); r=r+1){
+					for(r=1; r lte listLen(arguments.sessionStruct[arguments.rolekey]); r++){
 						if (listFindNoCase(rules[x].roles,listGetAt(arguments.sessionStruct[arguments.rolekey],r,',') ) neq 0 ) {
 							bUserOK = true;
 						}
